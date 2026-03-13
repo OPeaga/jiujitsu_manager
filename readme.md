@@ -2,7 +2,7 @@
 
 Um sistema completo de gestão pessoal para praticantes de Jiu Jitsu. Registre suas técnicas aprendidas, cadastre vídeos de estudo, acompanhe seu histórico de faixas (time-series) e contabilize a sua assiduidade nos tatames!
 
-![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-success)
+![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-orange)
 ![React](https://img.shields.io/badge/Frontend-React%20%2B%20Vite-61DAFB?logo=react&logoColor=black)
 ![Node](https://img.shields.io/badge/Backend-Node.js%20%2B%20Express-339933?logo=nodedotjs&logoColor=white)
 ![SQLite](https://img.shields.io/badge/Database-SQLite-003B57?logo=sqlite&logoColor=white)
