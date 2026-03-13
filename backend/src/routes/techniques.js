@@ -30,8 +30,8 @@ router.get('/', async (req, res) => {
   try {
     const { status } = req.query;
     let sql = 'SELECT * FROM techniques ORDER BY created_at DESC';
-    if (status === 'learned') sql = 'SELECT * FROM techniques WHERE learned = true ORDER BY created_at DESC';
-    else if (status === 'not_learned') sql = 'SELECT * FROM techniques WHERE learned = false ORDER BY created_at DESC';
+    if (status === 'learned') sql = 'SELECT * FROM techniques WHERE learned = 1 ORDER BY created_at DESC';
+    else if (status === 'not_learned') sql = 'SELECT * FROM techniques WHERE learned = 0 ORDER BY created_at DESC';
     const result = await query(sql);
     res.json(result.rows);
   } catch (err) {

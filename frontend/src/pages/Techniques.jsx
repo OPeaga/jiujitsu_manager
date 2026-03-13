@@ -21,12 +21,16 @@ function Modal({ tech, onSave, onClose }) {
   const [saving, setSaving] = useState(false);
   const [error,  setError]  = useState('');
 
-  const set = f => e => setForm(p => ({...p, [f]: e.target.type === 'checkbox' ? e.target.checked : e.target.value}));
+  const set = f => e => {
+    const val = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    setForm(p => ({ ...p, [f]: val }));
+  };
 
   const submit = async e => {
     e.preventDefault();
-    if (!form.name.trim()) { setError('Nome é obrigatório.'); return; }
-    setSaving(true); setError('');
+    if (!form.name.trim()) { setError('Nome é obrigatório'); return; }
+    setSaving(true); 
+    setError('');
     try {
       const saved = tech?.id ? await updateTechnique(tech.id, form) : await createTechnique(form);
       onSave(saved);
