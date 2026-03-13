@@ -1,0 +1,28 @@
+# dependências
+node_modules/
+
+# build e distribuição
+dist/
+build/
+.next/
+
+# arquivos de ambiente (MUITO IMPORTANTE PARA NÃO VAZAR SUA API_KEY!)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*
+
+# logs e debug do Node
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# arquivos de sistema (MacOS/Windows irritantes)
+.DS_Store
+Thumbs.db
+
+# configurações do editor
+.vscode/
+.idea/
